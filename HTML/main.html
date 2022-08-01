@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaudHTM</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+
+</head>
+<body>
+    <div class="wrapper">
+       
+        <div class="navbar">
+            <div class="logo"><a href="#">Daud<span>HTM</span></a></div>
+            <div class="open">  </div>
+            <nav>
+
+            <div class="close"> <img src="../Images/close.svg" alt=""></div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Academics</a></li>
+                    <li class="contact"><a  class="contact" href="#">Contact</a></li>
+                    
+                </ul>
+                
+            </nav>
+            
+        </div>
+    </div>
+    <script>
+        const menu = document.querySelector('.open')
+        const close= document.querySelector('.close')
+        const nav=document.querySelector('nav')
+        menu.addEventListener('click', () =>{
+            nav.classList.add('open-nav')
+
+        })
+        close.addEventListener('click', () =>{
+            nav.classList.remove('open-nav')
+
+        })
+
+
+
+    </script>
+</body>
+</html>
