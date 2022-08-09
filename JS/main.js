@@ -20,17 +20,20 @@ setInterval(change, 2000);
 
 function change(){
     textAm.classList.add('fade');
+    setTimeout(function(){
+        textAm.classList.add('fades')
+        setTimeout(function() {
 
-    setTimeout(function() {
-
-        
-        textAm.innerHTML = am[x];
-        textAm.classList.remove('fade');
-        console.log(am[x]);
-        x++;
-        if(x>4)
-        {
-            x=0;
-        }
-    },400);
+            
+            textAm.innerHTML = am[x];
+            textAm.classList.remove('fade');
+            textAm.classList.remove('fades')
+            console.log(am[x]);
+            x++;
+            if(x>4)
+            {
+                x=0;
+            }
+        },450);
+    },450);
 }

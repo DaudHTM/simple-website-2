@@ -145,7 +145,7 @@ nav{
                 
                 transition: all .2s ease-in-out;
                 font-size: min(9vw,1.4em);
-                
+ 
                
                 h2{
                     width: fit-content;
@@ -154,13 +154,20 @@ nav{
                     border-bottom: 4px solid #006494;
                     transform: translatex(0);
                     transition: transform .2s ease-in-out;
+                    opacity: 100%;
                 }
 
                 .fade{
-                    transform: translateX(13%);
+                    transition: opacity .1s ease-in-out;
+                    
                     opacity: 0;
                     
+                    
                         
+                }
+                .fades{
+                    transform: translateX(13%);
+                    transition: all .2s ease-in-out;
                 }
 
             }
@@ -177,10 +184,10 @@ nav{
             padding: .4em 1em;
             margin-top: .6em;
             cursor: pointer;
-           
+            transition: all .3s ease-in-out;
             a{
                 color: white;
-                transition: color .1s ease-in-out;
+     
             }
             &:hover{
                 a{
@@ -247,16 +254,33 @@ body{
             display: flex;
             margin: 0;
             padding: 0;
+            
             a{
+                position: relative;
                 margin: 0 .7em;
+                margin-top: .4em;
                 color: #f1eff1;
                 border-bottom: 0px solid #68B0AB;
                 transition: .15s ease-in-out;
                 &:hover{
                     color: #68B0AB;
-                    border-bottom: 3px solid #006494;
+                    
                 }
 
+            }
+            a::after{
+                margin-top: .1em;
+                position: absolute;
+                content: '';
+                display: block;
+                background-color: #006494;
+                width: 0%;
+                height: 3px;
+                transition: all .15s ease-in-out;
+
+            }
+            a:hover::after{
+                width: 100%;
             }
             li:hover{
                 background: none;

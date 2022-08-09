@@ -132,10 +132,15 @@ nav a {
   border-bottom: 4px solid #006494;
   transform: translatex(0);
   transition: transform 0.2s ease-in-out;
+  opacity: 100%;
 }
 .intro .introduction .am .position .fade {
-  transform: translateX(13%);
+  transition: opacity 0.1s ease-in-out;
   opacity: 0;
+}
+.intro .introduction .am .position .fades {
+  transform: translateX(13%);
+  transition: all 0.2s ease-in-out;
 }
 .intro .introduction .contactButton {
   background: #006494;
@@ -149,10 +154,10 @@ nav a {
   padding: 0.4em 1em;
   margin-top: 0.6em;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .intro .introduction .contactButton a {
   color: white;
-  transition: color 0.1s ease-in-out;
 }
 .intro .introduction .contactButton:hover a {
   color: #5ea7a2;
@@ -202,14 +207,28 @@ nav a {
     padding: 0;
   }
   .navbar nav ul a {
+    position: relative;
     margin: 0 0.7em;
+    margin-top: 0.4em;
     color: #f1eff1;
     border-bottom: 0px solid #68B0AB;
     transition: 0.15s ease-in-out;
   }
   .navbar nav ul a:hover {
     color: #68B0AB;
-    border-bottom: 3px solid #006494;
+  }
+  .navbar nav ul a::after {
+    margin-top: 0.1em;
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #006494;
+    width: 0%;
+    height: 3px;
+    transition: all 0.15s ease-in-out;
+  }
+  .navbar nav ul a:hover::after {
+    width: 100%;
   }
   .navbar nav ul li:hover {
     background: none;
