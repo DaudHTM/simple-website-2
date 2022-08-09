@@ -9,7 +9,7 @@
 
 body{
     
-    background: rgb(209, 209, 209);
+    background: rgb(41, 41, 41);
 }
 
 a{
@@ -19,13 +19,13 @@ a{
 }
 .logo{
     a{
-        color: black;
+        color: #f3f3f3;
 
-        font-size: 2em;
+        font-size: min(9vw,2em);
         border-bottom: 3px solid #006494;
         span{
             color: #68B0AB;
-            font-size: 2rem;
+            font-size: min(9vw,2.1rem);
             padding-left: .04em;
             
         }
@@ -48,9 +48,9 @@ a{
     }
 }
 .navbar .open{
-    background: url(../Images/open.svg);
-    width: 2em;
-    height: 2em;
+    background: url(../Images/close.png);
+    width: min(8vw,2em);
+    height: min(8vw,2em);
     
     background-size: cover;
     transition: .3s ease-in-out;
@@ -62,7 +62,7 @@ nav{
     right: 0;
     top: 0;
     height: 100vh;
-    width: 55%;
+    width: 65%;
     background: #1d1d1d;
     transform: translateX(100%);
     transition: .5s ease-in-out;
@@ -121,11 +121,12 @@ nav{
 
 
 .intro{
-    background: gray;
+    background: rgb(224, 224, 224);
     margin-top: .75em;
     width: 100%;
     height: 85vh;
-    font-size:5vh;
+    font-size:10vw;
+    font-size:min(9vw,2em);
     display: flex;
     align-items: center;
     .introduction{
@@ -142,30 +143,57 @@ nav{
                 
                 color: #5ea7a2;
                 
-                transition: 2s ease-in-out;
-                font-size: 5vh;
+                transition: all .2s ease-in-out;
+                font-size: min(9vw,1.4em);
                 
                
                 h2{
                     width: fit-content;
-                    transition: opacity .2s ease-in-out;
+                    transition: all .2s ease-in-out;
+                    transition: opacity .3s ease-in-out;
                     border-bottom: 4px solid #006494;
+                    transform: translatex(0);
+                    transition: transform .2s ease-in-out;
                 }
 
                 .fade{
-                    
+                    transform: translateX(13%);
                     opacity: 0;
-
+                    
                         
                 }
 
             }
+
             
         }
+        .contactButton{
+            background: #006494;
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1em;
+            padding: .4em 1em;
+            margin-top: .6em;
+            cursor: pointer;
+           
+            a{
+                color: white;
+                transition: color .1s ease-in-out;
+            }
+            &:hover{
+                a{
+                    color: #5ea7a2;
+                }
+            }
+        }
+
+        
     }
 }
 
-@media only screen and (min-width:920px){
+@media only screen and (min-width:1000px){
 
 body{
     height: 30000px;
