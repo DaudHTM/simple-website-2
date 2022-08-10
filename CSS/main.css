@@ -183,6 +183,10 @@ nav a {
   color: #6db8b3;
 }
 
+.socials {
+  display: none;
+}
+
 @media only screen and (min-width: 1000px) {
   body {
     height: 20000px;
@@ -191,7 +195,6 @@ nav a {
     display: none;
   }
   .wrapper {
-    border-bottom: 2px solid rgb(153, 153, 153);
     background: #1a1d1c;
   }
   .navbar {
