@@ -7,6 +7,7 @@ const textAm=document.getElementById('pos')
 const menu = document.querySelector('.open')       
 const close= document.querySelector('.close')
 const nav=document.querySelector('nav')
+
 menu.addEventListener('click', () =>{
     nav.classList.add('open-nav')
 
@@ -17,7 +18,7 @@ close.addEventListener('click', () =>{
 })
 
 setInterval(change, 2000);
-
+setInterval(scroll,300)
 function change(){
     textAm.classList.add('fade');
     setTimeout(function(){
@@ -37,3 +38,4 @@ function change(){
         },450);
     },450);
 }
+
