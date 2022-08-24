@@ -8,7 +8,8 @@
 }
 
 body {
-  background: #1a1d1c;
+  background: #181818;
+  height: 2000px;
 }
 
 a {
@@ -64,7 +65,7 @@ nav {
   width: 65%;
   background: #1d1d1d;
   transform: translateX(100%);
-  transition: 0.5s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 nav .close {
   width: 1.75em;
@@ -110,17 +111,17 @@ nav a {
 
 .intro {
   background: rgb(224, 224, 224);
-  background: linear-gradient(#f1eff1, #a1a1a1);
+  background: linear-gradient(#f1eff1, #c7c7c7);
   margin-top: 0.75em;
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   font-size: 10vw;
   font-size: min(9vw, 2em);
   display: flex;
   align-items: center;
 }
 .intro .introduction {
-  margin-bottom: 4rem;
+  margin-bottom: 0rem;
   padding-left: 1em;
 }
 .intro .introduction .am {
@@ -186,6 +187,46 @@ nav a {
 
 .socials {
   display: none;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3.5em 1.5em;
+}
+.about .picture {
+  background: url(../Images/me.jpg);
+  width: 53vw;
+  height: 59vw;
+  background-size: cover;
+  border-radius: 5em;
+}
+.about .bio {
+  font-size: 1.4em;
+  padding: 2em 7vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about .bio span {
+  color: #89e7e1;
+  font-size: 1.41em;
+  border-bottom: 3px solid #008ecf;
+}
+.about .bio .aboutMe {
+  padding: 0.75em 0em;
+  font-size: 1.45em;
+}
+.about .bio .aboutMe h1 {
+  color: #6db8b3;
+  border-bottom: 4px solid #006494;
+}
+.about .bio h2, .about .bio h1 {
+  color: white;
+  display: inline;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -277,9 +318,7 @@ nav a {
     margin: 1em 0em;
   }
   .intro {
-    position: absolute;
     font-size: 2.3rem;
-    margin-bottom: 1em;
     top: 0;
   }
   .intro .introduction {
@@ -295,5 +334,25 @@ nav a {
   }
   .intro .introduction .am .position {
     font-size: 2.5rem;
+  }
+  .about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: none;
+    padding: 2em 2em;
+    height: 100vh;
+  }
+  .about .picture {
+    width: min(25em, 35vw);
+    height: min(30em, 43vw);
+  }
+  .about .bio {
+    padding: 1em 0em;
+    width: 45vw;
+    height: min(20em, 43vw);
+    justify-content: left;
+    align-items: flex-start;
+    font-size: min(2vw, 1.5em);
   }
 }/*# sourceMappingURL=main.css.map */
